@@ -25,8 +25,667 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+        
+				<section>
+          <h2>Review - What are these things?</h2>
+          <pre><code data-trim data-noescape>
+            <mark>2</mark> <span class="fragment"># Integer</span>
+            "Hello World"
+            +
+            2 + 1
+            "Hello" + ", Jess"
+            name = "Haley"
+            "Hello, #{name}"
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Review - What are these things?</h2>
+          <pre><code data-trim data-noescape>
+            2 # Integer
+            <mark>"Hello World"</mark> <span class="fragment"># String</span>
+            +
+            2 + 1
+            "Hello" + ", Jess"
+            name = "Haley"
+            "Hello, #{name}"
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Review - What are these things?</h2>
+          <pre><code data-trim data-noescape>
+            2 # Integer
+            "Hello World" # String
+            <mark>+</mark> <span class="fragment"># Operator</span>
+            2 + 1
+            "Hello" + ", Jess"
+            name = "Haley"
+            "Hello, #{name}"
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Review - What are these things?</h2>
+          <pre><code data-trim data-noescape>
+            2 # Integer
+            "Hello World" # String
+            + # Operator
+            <mark>2 + 1</mark> <span class="fragment"># Expression</span>
+            "Hello" + ", Jess"
+            name = "Haley"
+            "Hello, #{name}"
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Review - What are these things?</h2>
+          <pre><code data-trim data-noescape>
+            2 # Integer
+            "Hello World" # String
+            + # Operator
+            2 + 1 # Expression
+            <mark>"Hello" + ", Jess"</mark> <span class="fragment"># Concatenation</span>
+            name = "Haley"
+            "Hello, #{name}"
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Review - What are these things?</h2>
+          <pre><code data-trim data-noescape>
+            2 # Integer
+            "Hello World" # String
+            + # Operator
+            2 + 1 # Expression
+            "Hello" + ", Jess" # Concatenation
+            <mark>name</mark> = "Haley" <span class="fragment"># Variable</span>
+            "Hello, #{name}"
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Review - What are these things?</h2>
+          <pre><code data-trim data-noescape>
+            2 # Integer
+            "Hello World" # String
+            + # Operator
+            2 + 1 # Expression
+            "Hello" + ", Jess" # Concatenation
+            name = "Haley" # Variable
+            <mark>"Hello, #{name}"</mark> <span class="fragment"># Interpolation</span>
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Review - What are these things?</h2>
+          <pre><code data-trim data-noescape>
+            2 # Integer
+            "Hello World" # String
+            + # Operator
+            2 + 1 # Expression
+            "Hello" + ", Jess" # Concatenation
+            name = "Haley" # Variable
+            "Hello, #{name}" # Interpolation
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Methods</h2>
+
+          <pre><code data-trim data-noescape>
+            def ask(question)
+              puts question
+              gets.chomp
+            end
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Methods</h2>
+
+          <p>This is the <em>method name</em></p>
+
+          <pre><code data-trim data-noescape>
+            def <mark>ask</mark>(question)
+              puts question
+              gets.chomp
+            end
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Methods</h2>
+
+          <p>This is called the <em>method signature</em></p>
+
+          <pre><code data-trim data-noescape>
+            def ask<mark>(question)</mark>
+              puts question
+              gets.chomp
+            end
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Methods</h2>
+
+          <p>The method signature defines the <em>Arguments</em> the method will use</p>
+
+          <pre><code data-trim data-noescape>
+            def ask<mark>(question)</mark>
+              puts question
+              gets.chomp
+            end
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Methods</h2>
+
+          <p>Arguments are basically variables used by the method</p>
+
+          <pre><code data-trim data-noescape>
+            def ask<mark>(question)</mark>
+              puts question
+              gets.chomp
+            end
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Callling Methods</h2>
+
+          <pre><code data-trim data-noescape>
+            # Turn This
+            puts "What is your name?"
+            name = gets.chomp
+
+            puts "What is your email?"
+            email = gets.chomp
+
+            <span class="fragment">
+            # Into This
+            name = ask("What is your name?")
+            email = ask("What is your email?")
+            </span>
+            
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Methods</h2>
+
+          <p>Why though?</p>
+
+          <pre><code data-trim data-noescape>
+            def ask(question)
+              puts question
+              gets.chomp
+            end
+          </code></pre>
+        </section>
+
+
+        <section>
+          <h2>Methods</h2>
+
+          <pre><code data-trim data-noescape>
+            def ask(question)
+              puts question
+              print "Answer Here > "
+              gets.chomp
+            end
+          </code></pre>
+        </section>
+
+
+        <section>
+          <h2>Methods</h2>
+
+          <pre><code data-trim data-noescape>
+            > ask "What is your name?"
+            What is your name?
+            Answer Here > Bradley
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>What's this again?</h2>
+
+          <pre><code data-trim data-noescape>
+            <mark>name</mark> = "Bradley"
+          </code></pre>
+        </section>
+
+        <section>
+          <p>Technically speaking it's a <em>local variable</em></p>
+
+          <pre><code data-trim data-noescape>
+            <mark>name</mark> = "Bradley"
+          </code></pre>
+        </section>
+    
+        <section>
+          <h2>Kinds of Variables</h2>
+
+          <pre><code data-trim data-noescape>
+            name = "Bradley" # local
+            @name = "Veronica" # instance
+            $name = "Gabe" # global
+          </code></pre>
+        </section>
+
+        <section>
+          <pre><code data-trim data-noescape>
+            def exercise
+              hunger = 5
+            end
+
+            def eat
+              hunger = 0
+            end
+
+            def hungry?
+              hunger < 3
+            end
+
+            exercise
+            eat
+            hungry?
+          </code></pre>
+        </section>
+
+
+        <section>
+          <pre><code data-trim data-noescape>
+            def exercise
+              hunger = 5
+            end
+
+            def eat
+              hunger = 0
+            end
+
+            def hungry?
+              <mark>hunger</mark> < 3
+            end
+
+            exercise
+            eat
+            hungry?
+          </code></pre>
+
+          <p>What's hunger?</p>
+        </section>
+
+        <section>
+          <pre><code data-trim data-noescape>
+            def exercise
+              hunger = 5
+            end
+
+            def eat
+              hunger = 0
+            end
+
+            def hungry?
+              <mark>hunger</mark> < 3
+            end
+
+            exercise
+            eat
+            hungry?
+
+            undefined local variable or method `hunger' for main:Object (NameError)
+          </code></pre>
+
+          <p>It's nothing</p>
+        </section>
+
+        <section>
+          <p>local variables are <em>local to where they are declared</em></p>
+        </section>
+
+        <section>
+          <pre><code data-trim data-noescape>
+            def exercise
+              <mark>hunger</mark> = 5
+            end
+
+            def eat
+              <mark>hunger</mark> = 0
+            end
+
+            def hungry?
+              <mark>hunger</mark> < 3
+            end          
+          </code></pre>
+
+          <p>All three of these are different variables declared in different contexts.</p>
+        </section>
+
+        <section>
+          <pre><code data-trim data-noescape>
+            def exercise
+              <mark>@hunger</mark> = 5
+            end
+
+            def eat
+              <mark>@hunger</mark> = 0
+            end
+
+            def hungry?
+              <mark>@hunger</mark> < 3
+            end          
+          </code></pre>
+
+          <p>Putting the @ before each variable name makes them instance variables or ivars</p>
+        </section>
+
+        <section>
+          <p>In a script, instance variables will be available, once declared, throughout the entire script</p>
+
+          <p class="fragment">In full-blown programs, there is a little more nuance, but we'll get to that another time</p>
+        </section>
+
+        <section>
+          <p>There's also global varibales - $name</p>
+
+          <p class="fragment">I encourage you to forget they exist because you should basically never use them</p>
+        </section> 
+
+        <section>
+          <p>Data Structures</p>
+
+
+          <pre><code data-trim data-noescape>
+            [
+              "a",
+              "b",
+              "c" 
+            ]
+          </code></pre>
+
+          <p class="fragment">This is called an array, it's just a list of items</p>
+        </section>
+
+        <section>
+          <p>Working with Arrays</p>
+
+
+          <pre><code data-trim data-noescape>
+            letters = [ "a", "b", "c" ]
+            letters.map(&:upcase)
+            <span class="fragment"># => ["A", "B", "C"]</span>2
+          </code></pre>
+        </section>
+
+
+        <section>
+          <p>Working with Arrays</p>
+
+          <pre><code data-trim data-noescape>
+            letters = [ "a", "b", "c" ]
+            letters.<mark>map</mark>(&:upcase)
+          </code></pre>
+
+          <p>What's this?</p>
+
+          <p class="fragment">map is a method on the Array class (well sort of)</p>
+
+          <p class="fragment">map returns a new array with some method called on each element of the array</p>
+        </section>
+
+
+        <section>
+          <p>Working with Arrays</p>
+
+          <pre><code data-trim data-noescape>
+            letters = [ "a", "b", "c" ]
+            letters[0]
+          </code></pre>
+
+          <p>What's this?</p>
+
+          <p class="fragment">Each element in an array has an index. They start counting at zero</p>
+
+          <p class="fragment">Why? <a href="https://stackoverflow.com/questions/7320686/why-does-the-indexing-start-with-zero-in-c">You can read about it here</a></p>
+        </section>
+
+        <section>
+          <p>There are tons of methods for touching each element in an array.</p>
+            
+          <p class="fragment">Lookup the Enumerable module for examples and documentation</p>
+        </section>
+
+
+        <section>
+          <p>Working with Arrays</p>
+
+          <pre><code data-trim data-noescape>
+            letters = [ "a", "b", "c" ]
+            letters[0]
+          </code></pre>
+
+          <p>[] is the method for accessing an element of an array by it's index.</p>
+
+          <p class="fragment">So what's letters[0]?</p>
+        </section>
+
+        <section>
+          <p>Working with Arrays</p>
+
+          <pre><code data-trim data-noescape>
+            letters = [ "a", "b", "c" ]
+            letters << "d"
+          </code></pre>
+
+          <p>What's this do?</p>
+        </section>
+
+
+        <section>
+          <p>Working with Arrays</p>
+
+          <pre><code data-trim data-noescape>
+            letters = [ "a", "b", "c" ]
+            letters <mark><<</mark> "d"
+          </code></pre>
+
+          <p class="fragment">This is the shovel operator <<</p>
+          <p class="fragment">This adds an element to the array</p>
+        </section>
+
+
+        <section>
+          <p>Working with Arrays</p>
+
+          <pre><code data-trim data-noescape>
+            letters = [ "a", "b", "c" ]
+            letters.unshift "d"
+          </code></pre>
+
+          <p>What's this do?</p>
+        </section>
+
+
+        <section>
+          <p>Working with Arrays</p>
+
+          <pre><code data-trim data-noescape>
+            letters = [ "a", "b", "c" ]
+            letters.unshift "d"
+          </code></pre>
+
+          <p class="fragment">unshift adds an element to the beginning of the array</p>
+        </section>
+
+        <section>
+          <p>Working with Arrays</p>
+
+          <pre><code data-trim data-noescape>
+            letters = [ "a", "b", "c" ]
+            letters.unshift "d"
+            <span class="fragment">["d", "a", "b", "c"]</span>
+          </code></pre>
+        </section>
+
+        <section>
+          <p>Data Structures</p>
+
+          <pre><code data-trim data-noescape>
+            {
+              name: 'Bradley',
+              age: '36 Years Old',
+              rating: 'Awesome'
+            }
+          </code></pre>
+
+          <p class="fragment">This is called a hash, it's sometimes called a dictionary. You have keys and values.</p>
+          <p class="fragment">The key can be anything but is most typically a string or symbol. This one is using symbols</p>
+        </section>
+
+        <section>
+          <p>Data Structures</p>
+
+          <pre><code data-trim data-noescape>
+            bradley = {
+              name: 'Bradley',
+              age: '36 Years Old',
+              rating: 'Awesome'
+            }
+
+            <mark>bradley['name']</mark>
+          </code></pre>
+
+          <p>What's this?</p>
+        </section>
+
+        <section>
+          <p>Working with Hashes</p>
+
+          <pre><code data-trim data-noescape>
+            bradley = {
+              name: 'Bradley',
+              age: '36 Years Old',
+              rating: 'Awesome'
+            }
+
+            bradley['name'] # => nil
+          </code></pre>
+
+          <p class="fragment">This is using a string key, which isn't present in the hash</p>
+        </section>
+
+        <section>
+          <p>Working With Hashes</p>
+
+          <pre><code data-trim data-noescape>
+            bradley = {
+              name: 'Bradley',
+              age: '36 Years Old',
+              rating: 'Awesome'
+            }
+
+            bradley[:rating]
+          </code></pre>
+        </section>
+
+        <section>
+          <p>Working with Hashes</p>
+
+          <pre><code data-trim data-noescape>
+            bradley = {
+              name: 'Bradley',
+              age: '36 Years Old',
+              rating: 'Awesome'
+            }
+
+            bradley[<mark>:rating</mark>]
+          </code></pre>
+
+          What's this?
+        </section>
+
+        <section>
+          <p>Symbols are like strings, except they can't be changed, and are more efficient memory wise. They are preceeded by a colon</p>
+
+          <p class="fragment">Their most common use case is as keys in hashes and similar objects</p>          
+        </section>
+
+        <section>
+          <p>Working with Hashes</p>
+
+          <pre><code data-trim data-noescape>
+            bradley = {
+              name: 'Bradley',
+              age: '36 Years Old',
+              rating: 'Awesome'
+            }
+
+            bradley[:rating]
+          </code></pre>
+
+          So what's this?
+        </section>
+
+
+        <section>
+          <pre><code data-trim data-noescape>
+            bradley = {
+              name: 'Bradley',
+              age: '36 Years Old',
+              rating: 'Awesome'
+            }
+
+            bradley.fetch(:profession, "Vagrant")
+            # => Vagrant
+
+          </code></pre>
+        </section>
+
+        <section>
+          <pre><code data-trim data-noescape>
+            alli = {
+              name: 'Alli',
+              rating: 'Awesome',
+              profession: 'Software Developer'
+            }
+
+            alli.fetch(:profession, "Vagrant")
+            # => Software Developer
+          </code></pre>
+
+          What's fetch do?
+        </section>
+
+        <section>
+          <img src="./images/so-fetch.jpg" alt="">
+        </section>
+
+        <section>
+          <p>Assignment Time</p>
+          <p>You are going to make a script that lets you play the card game War</p>
+          <p>War doesn't require any user input, so your script can just run through each round and say what happens</p>
+        </section>
+
+        <section>
+          <a href="https://bicyclecards.com/how-to-play/war/">Rules of War</a>
+        </section>
+
+        <section>
+          <p>Tips</p>
+          <ul>
+            <li class="fragment">Create an array to represent the deck of cards. each element is a different card</li>
+            <li class="fragment">Randomly divide the array into two different piles for each players draw pile</li>
+            <li class="fragment">Loop through each round of play, outputting the outcome of each battle and war to the console</li>
+            <li class="fragment">Google stuff all the time</li>
+          </ul>
+        </section>
+        
+
+
 			</div>
 		</div>
 
